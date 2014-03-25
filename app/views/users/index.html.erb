@@ -1,0 +1,15 @@
+<h1>
+	Here are the users:
+</h1>
+
+<% @users.each do |user| %>
+  <%=user.fname%>
+  <br>
+  <%= link_to 'User Profile', user_path(user.id) %>
+  <br>
+<% end %>
+
+
+<% @users.each do |user| %>
+Profile: <%=link_to 'x', user_path(user), method: :delete, confirm: 'Are you sure you want to delete this user?' %>
+<% end %>

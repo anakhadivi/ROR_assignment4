@@ -1,0 +1,13 @@
+My Posts:
+<br>
+<br>
+
+<% @posts.each do |post|%>
+<b><%= post.title %></b>
+<br>
+<%= post.body %>
+<br>
+<%= post.created_at %>
+<br>
+<br>
+<% end %>
